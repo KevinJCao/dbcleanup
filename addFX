@@ -1,0 +1,19 @@
+declare @createstr nvarchar(max)
+
+declare create_cursor CURSOR for
+select distinct create_script from [DBADB].dbo.tbl_IndexDropRebuildFX where create_script is not null order by create_script;
+
+open create_cursor;
+
+fetch next from create_cursor into @createstr;
+
+while @@FETCH_STATUS=0
+BEGIN
+
+exec (@createstr);
+
+fetch next from create_cursor into @createstr;
+END
+
+close create_cursor;
+DEALLOCATE create_cursor;
