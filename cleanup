@@ -1,0 +1,449 @@
+USE [efm-stagenocase]
+GO
+
+truncate table ecourt.[tDocumentEFileMetaData_tParty];
+
+truncate table ecourt.[tCase_eFilingRejectReasons];
+
+truncate table ecourt.[tQuestionAnswer_values];
+
+truncate table ecourt.[tCaseMessage];
+
+truncate table ecourt.tCaseMessageReply;
+
+truncate table ecourt.[tDocumentEFileMetaData] ;
+
+truncate table ecourt.[tDocumentHearing];
+
+truncate table ecourt.[tDocumentRelated];
+
+truncate table ecourt.[tDocumentEFileMetaData_tDocument];
+
+truncate table ecourt.[tDocumentEFileMetaData_tScheduledEvent];
+
+--truncate table ecourt.[tDocumentEFileMetaData_tDocumentRelatedCase];
+
+truncate table ecourt.[tDocumentFolder];
+
+truncate table ecourt.tGLSubsidiary;
+truncate table ecourt.tPaymentInvoiceAllocation;
+truncate table ecourt.tPaymentInvoiceAssessment;
+truncate table ecourt.tPaymentInvoiceTransfer;
+
+truncate table ecourt.tInstallmentPayment;
+truncate table ecourt.tPaymentInvoiceTrustTransfer;
+truncate table ecourt.tPaymentInvoice;
+truncate table ecourt.tInvoiceAssessment;
+truncate table ecourt.tDocument_fees;
+truncate table ecourt.tInvoice;
+truncate table ecourt.tParty_joinedObligations;
+truncate table ecourt.tObligation;
+truncate table ecourt.tPayPlanDateOfMonth;
+truncate table ecourt.tInstallment;
+truncate table ecourt.tPayPlanDayOfWeek;
+truncate table ecourt.tPayPlanDayRankInMonth;
+truncate table ecourt.tPayPlanItem;
+truncate table ecourt.tPayPlan;
+truncate table ecourt.tPartyTrustAllocation;
+truncate table ecourt.tTrustTransactionTransfer;
+truncate table ecourt.tTrustTransaction;
+truncate table ecourt.tTrustAllocation;
+truncate table ecourt.tTrust;
+truncate table ecourt.tMonInstrument;
+truncate table ecourt.tNonMonetary;
+truncate table ecourt.tPMInstrumentItem;
+truncate table ecourt.tVoucher;
+truncate table ecourt.tApprovalStatus;
+truncate table ecourt.tApprovalRequest;
+truncate table ecourt.tReceipt_cases;
+truncate table ecourt.tReceipt;
+truncate table ecourt.tPayment;
+truncate table ecourt.tPartyStatus;
+truncate table ecourt.tFeeWaiver;
+truncate table ecourt.tEntryOfDefaultParty_notEnteredReasons;
+truncate table ecourt.tEntryOfDefaultParty;
+truncate table ecourt.tWarrantAttachments_parties;
+truncate table ecourt.tBail;
+truncate table ecourt.tPartySpecialStatus;
+truncate table ecourt.tLa_CivilPartyStatus;
+truncate table ecourt.tDismissalParty;
+truncate table ecourt.tJudgmentAwardParty;
+truncate table  ecourt.tPayment;
+truncate table ecourt.tPartyRepresentation;
+truncate table ecourt.tparty;
+truncate table ecourt.tSubCaseAmendment;
+truncate table ecourt.taddress;
+truncate table ecourt.tSpecialStatus;
+truncate table ecourt.tScheduledEvent_assignments;
+truncate table ecourt.tCaseAssignment;
+truncate table ecourt.tDocumentStorageId;
+truncate table ecourt.tDocumentStorageType;
+truncate table ecourt.tDocumentKeyword;
+truncate table ecourt.tDocumentStatus;
+truncate table ecourt.tMinutesResult_documents;
+truncate table ecourt.tMinutesAccess;
+truncate table ecourt.tMinutesResult_codes;
+truncate table ecourt.tMinutesResult_courtRoomPersonnel;
+--truncate table ecourt.tMinutesResult_tCourtRoomPerson;
+truncate table ecourt.tEventAppearance_checkInAlerts;
+truncate table ecourt.tMinutesAmendment;
+truncate table ecourt.tEventAppearance;
+truncate table ecourt.tScheduledEvent; 
+truncate table ecourt.tMinutesResult;
+truncate table ecourt.tEventFlag;
+truncate table ecourt.tLa_HearingInterpreter;
+truncate table ecourt.tTentativeRuling_events;
+truncate table ecourt.tScheduledEvent_minutesRelated;
+truncate table ecourt.tSchedulEvent_resourceAssignm;
+truncate table ecourt.tScheduledEvent_specialNeeds;
+truncate table ecourt.tUnderSubmission;
+truncate table ecourt.tQuestionAnswer;
+truncate table ecourt.tQuestionnaireResponse;
+truncate table ecourt.tMinutesResult;
+truncate table ecourt.tScheduledEvent_documents;
+truncate table ecourt.tScheduledEvent_languages;
+truncate table ecourt.tScheduledEvent;
+truncate table ecourt.tDocumentStamp;
+truncate table ecourt.tDocumentAnnotation_tags;
+truncate table ecourt.tDocumentAnnotation;
+truncate table ecourt.tDocument_judgmentAwards;
+truncate table ecourt.tDocument_tProceeding;
+truncate table ecourt.tDocumentData;
+truncate table ecourt.tDocumentAmendment;
+truncate table ecourt.tOcrProcess;
+truncate table ecourt.tDocumentAddress;
+truncate table ecourt.tDocumentPrintAuditLog;
+truncate table ecourt.tEntryOfDefault_la_defaultAttributes;
+truncate table ecourt.tEntryOfDefault_la_defaultJudgmentReasons;
+truncate table ecourt.tEntryOfDefault;
+truncate table ecourt.tLa_RequestForDecision;
+truncate table ecourt.tScheduledEvent;
+truncate table ecourt.tDocuments_transfers;
+truncate table ecourt.tDocumentTracking;
+truncate table ecourt.tDismissal;
+truncate table ecourt.tDocumentSeal;
+GO
+truncate table ecourt.tDocument;
+truncate table ecourt.tSubCaseStatus;
+truncate table ecourt.tJudgmentAwardStatus;
+truncate table ecourt.tJudgmentAwardParty;
+truncate table ecourt.tJudgmentAward;
+truncate table ecourt.tJudgment;
+truncate table ecourt.tSubCaseDisposition;
+truncate table ecourt.tCaseAddress
+truncate table ecourt.tSubCase;
+truncate table ecourt.tCaseCrossReference;
+truncate table ecourt.tCaseStatus;
+truncate table ecourt.tPersonSpecialStatus;
+truncate table ecourt.tExhibitTracking;
+truncate table ecourt.tExhibit;
+USE [efm-stagenocase]
+GO
+DBCC SHRINKFILE (N'ecourt-dev_log' , 0)
+GO
+
+truncate table ecourt.tProceeding;
+truncate table ecourt.tPersonProfile;
+truncate table ecourt.tCaseDisposition;
+truncate table ecourt.tCaseJoinedItem;
+truncate table ecourt.tCaseResourceAssignment;
+truncate table ecourt.tWarrantAttachmentStatus;
+truncate table ecourt.tWarrantAttachment;
+truncate table ecourt.tTimeStandard;
+truncate table ecourt.tUserCaseWatch;
+truncate table ecourt.tCourtTransfer;
+truncate table ecourt.tCaseNote_tags;
+truncate table ecourt.tCaseNoteReply
+truncate table ecourt.tCaseNote;
+truncate table ecourt.tTentativeRuling;
+truncate table ecourt.tWMActivityInstData;
+truncate table ecourt.tWMAssignment;
+go
+truncate table ecourt.tWMDeadlineInst;
+truncate table ecourt.tWMActivityInstNote;
+truncate table ecourt.tWMActivityInstLog;
+truncate table ecourt.tWMWorkItemInstLog;
+truncate table ecourt.tWMWorkItemInst;
+truncate table ecourt.tWMActivityInst;
+truncate table ecourt.tCaseOtherNumber;
+truncate table ecourt.tCase_caseLabels;
+truncate table ecourt.tSharebookEntry;
+GO
+truncate table ecourt.tTracking;
+truncate table ecourt.tExhibitList;
+truncate table ecourt.tCaseSeal;
+truncate table ecourt.tLa_TrialAssignment;
+truncate table ecourt.tCaseCodeParamTracking;
+truncate table ecourt.tCaseCodeTracking;
+USE [efm-stagenocase]
+GO
+DBCC SHRINKFILE (N'ecourt-dev_log' , 0)
+GO
+
+truncate table ecourt.troamessage;
+GO
+truncate table  ecourt.tLa_DwCaseRefresh;
+
+truncate table ecourt.tConversionException;
+truncate table  ecourt.tPerson;
+truncate table ecourt.tTelephone;
+truncate table ecourt.tCaseAlert;
+truncate table ecourt.tcase;
+truncate table ecourt.tperson;
+truncate table ecourt.tTelephone;
+truncate table ecourt.tPersonAKA;
+truncate table ecourt.tIdentification;
+truncate table ecourt.tPersonIdentifier;
+truncate table ecourt.tScheduledEvent;
+truncate table ecourt.tDismissal;
+truncate table ecourt.tDismissalParty;
+USE [efm-stagenocase]
+GO
+DBCC SHRINKFILE (N'ecourt-dev_log' , 0)
+GO
+
+truncate table ecourt.tJudgment;
+truncate table ecourt.tJudgmentAward;
+truncate table ecourt.tJudgmentAwardParty;
+truncate table ecourt.tEntryOfDefault;
+truncate table ecourt.tEntryOfDefaultParty;
+truncate table ecourt.tCaseAssignment;
+
+truncate table ecourt.tPartyStatus;
+truncate table ecourt.tLa_CivilPartyStatus;
+truncate table ecourt.tTimeStandard;
+truncate table ecourt.tSpecialStatus;
+
+truncate table ecourt.tWMWorkflowAuditLog;
+truncate table ecourt.tWMActivityInstData;
+truncate table ecourt.tWMWorkItemInstLog;
+truncate table ecourt.tWMWorkItemInst;
+truncate table ecourt.tWMActivityInst;
+truncate table ecourt.tScreenLog_validationErrors;
+truncate table ecourt.tReceiptData;
+GO
+
+declare @cnt INT=0;
+declare @tablename varchar(500),
+        @sqlstr nvarchar(1000)
+
+While @cnt<2
+begin
+
+declare vtable_cur cursor for
+SELECT 'ecourt.'+TABLE_NAME 
+FROM [efm-stagenocase].INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_TYPE = 'BASE TABLE' and  (table_name like 'V_t%' or table_name like '%Log')
+
+open vtable_cur;
+fetch next from vtable_cur into @tablename;
+
+while @@FETCH_STATUS=0
+begin
+select @sqlstr='truncate table '+@tablename+';';
+--print @sqlstr;
+exec(@sqlstr);
+fetch next from vtable_cur into @tablename;
+end
+
+close vtable_cur;
+deallocate vtable_cur;
+
+set @cnt=@cnt+1
+
+END
+
+
+truncate table ecourt.tAuditLog;
+
+
+truncate table ecourt.tSearchLog;
+truncate table ecourt.tAccessLog;
+truncate table ecourt.tPrintLog;
+truncate table ecourt.tReportLog;
+
+truncate table ecourt.tSubmission;
+truncate table [ecourt].[tSubmissionEFMResponse_tDocument];
+truncate table [ecourt].[tSubmission_applicationTypes];
+
+truncate table [ecourt].[tSubmissionEFMResponse];
+truncate table [ecourt].[tWMProcessInstData];
+
+
+truncate table ecourt.treconciliation
+truncate table  ecourt.tPMInstrumentItem
+truncate table   ecourt.tPMInstrument
+truncate table  ecourt.tTransportBatch
+
+truncate table ecourt.tCaseJoinder;
+truncate table ecourt.tCheckBatch;
+truncate table [ecourt].[tTillSheetData];
+truncate table ecourt.tTillInstrumentSummary;
+truncate table ecourt.tTillCurrency;
+truncate table ecourt.tTillPickupCurrency;
+truncate table ecourt.tTillPickup;
+truncate table ecourt.tTill;
+
+truncate table ecourt.tcasereportcode;
+truncate table ecourt.tdocumentparty;
+truncate table [ecourt].[tCase_tags];
+
+--delete from ecourt.tCourtRoomPersonnel_tCourtRoomPerson
+
+--delete from ecourt.tCourtRoomPerson
+
+truncate table ecourt.tCourtRoomPersonnel_personnel
+
+truncate table ecourt.tCourtRoomPersonnel
+
+truncate table ecourt.tCalendarDayBucket
+truncate table ecourt.tCalendarDaySortOptions_events;
+
+truncate table ecourt.tCalendarDaySortOptions
+
+truncate table ecourt.tCalendarDaySortOptions_events
+
+truncate table ecourt.tWMProcessInst
+
+truncate table ecourt.tROATransactionGroup
+
+truncate table ecourt.tCrossReference
+
+truncate table ecourt.tCaseJoinder
+
+truncate table ecourt.tTillInstrumentSummary
+
+truncate table ecourt.tTillPickupCurrency
+truncate table ecourt.tTillCurrency
+
+truncate table ecourt.tTillPickup
+
+truncate table ecourt.tMinutesResultContent
+
+truncate table ecourt.tConsolidatedTillSummary
+truncate table ecourt.tDailyConsolidatedRevenue
+
+truncate table ecourt.tTill
+
+truncate table ecourt.tJournalEntry
+
+--truncate table ecourt.tCartViewHistory
+truncate table ecourt.tCartItem
+
+truncate table ecourt.tCart
+
+truncate table ecourt.tFileUpload
+truncate table ecourt.tDocketDay
+truncate table ecourt.tTimeSlotHold
+
+truncate table ecourt.tReportArchiveParam
+
+truncate table ecourt.tReportArchive
+
+truncate table ecourt.tConsolidatedRevenue;
+
+truncate table ecourt.[tDocumentHearing];
+truncate table [ecourt].[tDocumentRelated];
+truncate table [ecourt].[tDocumentEFileMetaData];
+
+truncate table [ecourt].[tDocumentHearing];
+truncate table [ecourt].[tDocumentRelated];
+
+truncate table [ecourt].[tDocumentEFileMetaData];
+truncate table [ecourt].[tDocumentEFileMetaData_tParty];
+
+truncate table ecourt.tWMDeadlineInst;
+
+truncate table ecourt.tWMActivityInstData;
+
+truncate table ecourt.tWMActivityInstData;
+
+truncate table ecourt.tWMActivityInstLog;
+
+truncate table ecourt.tWMAssignment;
+
+truncate table ecourt.tWMDeadlineInst;
+
+truncate table ecourt.tWMWorkItemInstLog;
+
+truncate table ecourt.tWMWorkItemInst;
+
+truncate table ecourt.tWMActivityInstNote;
+
+truncate table ecourt.tWMActivityInst;
+
+truncate table ecourt.tWMDeadlineInst;
+
+truncate table ecourt.tWMActivityInstData;
+
+truncate table ecourt.tWMAssignment;
+
+truncate table ecourt.tWMActivityInst;
+
+truncate table ecourt.tWMProcessInst;
+
+
+truncate table [ecourt].[tQuestionAnswer_values];
+truncate table [ecourt].[tQuestionAnswer];
+truncate table [ecourt].[tDocumentEFileMetaData_tDocument];
+
+truncate table ecourt.tDocument_tProceeding;
+truncate table ecourt.tMinutesResult_codes;
+truncate table ecourt.tMinutesResult_documents;
+--truncate table ecourt.tMinutesResult_tCourtRoomPerson;
+truncate table ecourt.tEventAppearance_checkInAlerts;
+truncate table ecourt.tEventAppearance;
+truncate table ecourt.tDocumentHearing;
+truncate table ecourt.tMinutesAccess;
+truncate table ecourt.tMinutesResult
+truncate table ecourt.tScheduledEvent;
+truncate table ecourt.tMinutesResult;
+truncate table ecourt.tProceeding;
+
+--truncate table  [ecourt].[tEfmFilingFee_partyIds];
+
+truncate table [ecourt].[tCase_eFilingRejectReasons];
+truncate table [ecourt].[tCaseMessage];
+truncate table [ecourt].[tCaseMessageReply];
+truncate table [ecourt].[tDocumentEFileMetaData_tScheduledEvent];
+truncate table ecourt.tAccessLogArchive;
+
+
+
+--truncate table [ecourt].[tDocumentEFileDownload]; 
+--truncate table [ecourt].[tDismissal_documents];
+--truncate table [ecourt].[tDocketDay_createdUserBuckets];
+
+truncate table ecourt.tTillSchedule;
+truncate table ecourt.tTillParticipant;
+truncate table ecourt.tWMParticipant;
+
+truncate table ecourt.tDocumentEFilingData;
+--truncate table ecourt.tKM_AuthNet;
+--truncate table ecourt.tKM_REFUND;
+truncate table ecourt.tEfmFiling_tDocument;
+truncate table ecourt.tEfmFilingRecordingStep;
+truncate table ecourt.tEfmFiling;
+truncate table ecourt.tEfmTransaction;
+truncate table ecourt.tEfmFilingData;
+--truncate table ecourt.[tCourtRoomPersonnelPerson];
+
+truncate table ecourt.[tDocument_statusReasons];
+truncate table ecourt.[tDocumentEFileMetaData_tJudgment];
+truncate table ecourt.[tEfmFiling_applicationTypes];
+truncate table ecourt.[tEfmFiling_reasons];
+truncate table ecourt.[tEfmFilingFee];
+--truncate table ecourt.[tEfmFilingRecordStepRetryReq];
+truncate table ecourt.[tPaymentTokenizationRequest];
+truncate table ecourt.[tPaymentTokenizationResponse];
+--truncate table ecourt.[tTransactionAuthorization];
+--truncate table [ecourt].[tCashBalance];
+truncate table [ecourt].[tCourtRoomPersonnel_tCourtRoomPerson];
+
+truncate table ecourt.tWMActivityInstData;
+truncate table ecourt.tWMWorkItemInst;
+truncate table ecourt.tWMActivityInst
+truncate table ecourt.twmprocessinst;
+
+--truncate table ecourt.tSystemMetricTrace
+--truncate table ecourt.tSystemMetric
