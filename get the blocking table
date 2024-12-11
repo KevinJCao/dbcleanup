@@ -1,0 +1,14 @@
+
+
+begin tran
+
+BEGIN TRY
+
+ALTER TABLE [ecourt].[V_tPersonFinancialInfo] ADD CONSTRAINT [FK12BB66B7CC5CE1FC] FOREIGN KEY ([REV]) REFERENCES [ecourt].[tAuditLog]([id]);
+END try
+
+begin catch
+ SELECT SUBSTRING(ERROR_MESSAGE(),PATINDEX('%"%',ERROR_MESSAGE())+1, 17), ERROR_MESSAGE() AS ErrorMessage
+end catch
+
+rollback tran;
